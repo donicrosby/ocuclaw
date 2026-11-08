@@ -773,11 +773,11 @@ def _hermes_feature_tokens() -> Tuple[str, ...]:
 # admission and SessionDB contract is certified against this exact upstream
 # release. In-minor patches remain admissible, but the release watcher creates
 # an immediate recertification obligation for every first-seen 0.21.x patch.
-CERTIFIED_HERMES_VERSION = "0.21.5"
-CERTIFIED_HERMES_TAG = "v2026.9.24"
-CERTIFIED_HERMES_COMMIT = "f97608f178d1ffeca59860195ab7da295f7c8e5f"
+CERTIFIED_HERMES_VERSION = "0.22.5"
+CERTIFIED_HERMES_TAG = "v0.22.5"
+CERTIFIED_HERMES_COMMIT = "bf0203a794a07aac3ff764972ab9087baa4e4f4e"
 SUPPORTED_HERMES_MIN = (0, 21, 1)
-SUPPORTED_HERMES_MAX_EXCLUSIVE = (0, 22, 0)
+SUPPORTED_HERMES_MAX_EXCLUSIVE = (0, 23, 0)
 
 # Hermes owns these bytes for every OcuClaw-platform session. Keep the section
 # constant: callbacks are re-rendered after 0.21 prompt invalidation/compaction,

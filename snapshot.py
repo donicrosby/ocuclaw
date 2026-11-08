@@ -451,9 +451,10 @@ _FINDINGS: Dict[str, Tuple[str, str, str, Optional[str]]] = {
         "setup",
         "error",
         "This Hermes host is outside the supported OcuClaw contract. "
-        "Use Hermes 0.21.x (recommended release v2026.9.24 / engine 0.21.5), "
-        "then restart and run hermes ocuclaw doctor --json. "
-        "Do not force-load this bundle on older or 0.22+ engines.",
+        "Use Hermes 0.21.5 or later 0.21.x, or the 0.22.x compatibility "
+        "port (recommended release v0.22.5), then restart and run "
+        "hermes ocuclaw doctor --json. Do not force-load this bundle on "
+        "unsupported engines.",
         "install_supported_hermes",
     ),
     "profile_unresolved": (
@@ -560,7 +561,7 @@ _FINDINGS: Dict[str, Tuple[str, str, str, Optional[str]]] = {
 
 _TOKEN_RE = re.compile(r"[^A-Za-z0-9._+\-]")
 # A version RANGE legitimately carries comparison operators and a comma; a
-# separate, still-bounded allowlist keeps ">=0.21.1,<0.22.0" readable without
+# separate, still-bounded allowlist keeps ">=0.21.1,<0.23.0" readable without
 # widening the charset that producer/profile identity strings pass through.
 _RANGE_RE = re.compile(r"[^A-Za-z0-9._+\-<>=!~^,* ]")
 _TOKEN_MAX_CHARS = 40
