@@ -2144,8 +2144,10 @@ error document; the child never fabricates health. OpenClaw has no parent
 method and attaches no `connection-health.json`.
 
 `producer.hermesSource` has exactly three advisory states. `certified-source`
-means package `0.21.5` and a complete clean checkout at the certified
-`v2026.9.24` commit; `drifted` means a complete inspectable checkout differs;
+means the plugin's pinned constants (`CERTIFIED_HERMES_VERSION` /
+`CERTIFIED_HERMES_COMMIT` — currently package `0.22.5` at certified `v0.22.5`,
+commit `bf0203a7`), a complete clean checkout at that commit; `drifted` means
+a complete inspectable checkout differs;
 `unknown` covers shallow/non-Git installs, missing objects or package metadata,
 timeouts, and any inspection ambiguity, including partial/promisor clones. The
 observed/certified short commits, shallow result, and cache timestamp use the

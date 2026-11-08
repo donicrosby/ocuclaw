@@ -772,7 +772,7 @@ def _hermes_feature_tokens() -> Tuple[str, ...]:
 # Supported Hermes range for this bundle build. The complete Backend Adapter
 # admission and SessionDB contract is certified against this exact upstream
 # release. In-minor patches remain admissible, but the release watcher creates
-# an immediate recertification obligation for every first-seen 0.21.x patch.
+# an immediate recertification obligation for every first-seen 0.22.x patch.
 CERTIFIED_HERMES_VERSION = "0.22.5"
 CERTIFIED_HERMES_TAG = "v0.22.5"
 CERTIFIED_HERMES_COMMIT = "bf0203a794a07aac3ff764972ab9087baa4e4f4e"

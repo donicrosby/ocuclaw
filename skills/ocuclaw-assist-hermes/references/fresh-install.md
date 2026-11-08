@@ -67,8 +67,8 @@ When `{"operation":"status"}` reports a non-unknown `hermesVersion`, that
 receipt decides the gate: PASS when it is inside `supportedRange`; a version
 outside `>=0.21.1,<0.23.0` -> `HERMES-GATE-REFUSED`, regardless of the shell
 probe. Only when `hermesVersion` is `"unknown"` does the probe decide: Hermes
-0.21.1 or a later 0.21.x is PASS, and an earlier version (0.21.0 included) or a
-later line -> `HERMES-GATE-REFUSED`.
+0.21.1 through 0.22.x is PASS, and an earlier version (0.21.0 included) or
+0.23.0 and later -> `HERMES-GATE-REFUSED`.
 `command not found` beside a supported `status.hermesVersion` is the
 trust-ladder case: Hermes is installed; continue, handing commands to the
 user's terminal. Only when the probe fails *and* `hermesVersion` is `"unknown"`
